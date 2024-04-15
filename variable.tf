@@ -5,7 +5,7 @@ variable "region" {
 
 variable "accountId" {
   type    = string
-  default = ""
+  default = "730335293158"
 }
 
 variable "endpoint" {

@@ -11,7 +11,7 @@ resource "aws_api_gateway_resource" "calculator_resource" {
 resource "aws_api_gateway_method" "calculator_method" {
   rest_api_id   = aws_api_gateway_rest_api.calculator_api.id
   resource_id   = aws_api_gateway_resource.calculator_resource.id
-  http_method   = "POST"
+  http_method   = "GET"
   authorization = "NONE"
 }
 
