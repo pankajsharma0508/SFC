@@ -1,15 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
-# resource "aws_instance" "instance" {
-#   ami           = "ami-051f8a213df8bc089"
-#   instance_type = "t2.micro"
-#   tags = {
-#     name = "pank-instance"
-#   }
-# }
-
 resource "random_pet" "lambda_bucket_name" {
   prefix = "lambda"
   length = 3
@@ -73,4 +61,3 @@ resource "aws_s3_object" "lambda_calculator" {
   source = data.archive_file.lambda_calculator.output_path
   etag   = filemd5(data.archive_file.lambda_calculator.output_path)
 }
-
