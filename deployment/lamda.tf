@@ -51,8 +51,8 @@ resource "aws_lambda_function" "calculator" {
 
 data "archive_file" "lambda_calculator" {
   type        = "zip"
-  source_dir  = "${path.module}/lambda"
-  output_path = "${path.module}/lambda.zip"
+  source_dir  = "${path.module}/../lambda"
+  output_path = "${path.module}/../lambda.zip"
 }
 
 resource "aws_s3_object" "lambda_calculator" {

@@ -1,13 +1,13 @@
 resource "aws_amplify_app" "sfc_amplify_app" {
   name                     = "sfc-amplify-app"
   repository               = "https://github.com/pankajsharma0508/sfc"
-  access_token             = "..."
+  #access_token             = "..."
   enable_branch_auto_build = true
 
    custom_rule {
     source = "/<*>"
     status = "200"
-    target = "/WildRydesVue/public/index.html<*>"
+    target = "/public/index.html<*>"
   }
 }
 
