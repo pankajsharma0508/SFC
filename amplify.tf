@@ -7,7 +7,7 @@ resource "aws_amplify_app" "sfc_amplify_app" {
    custom_rule {
     source = "/<*>"
     status = "200"
-    target = "/static/index.html<*>"
+    target = "/WildRydesVue/public/index.html<*>"
   }
 }
 
